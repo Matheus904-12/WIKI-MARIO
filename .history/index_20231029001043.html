@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página do Mario</title>
+<style>
+  body {
+    background-color: #E70010;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+
+  .play-button {
+    background-color: #FFD700;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .play-button:hover {
+    transform: scale(1.1) translateZ(0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 3px 0;
+    transition: background-color 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: flex;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    nav.active {
+      display: flex;
+    }
+
+    nav a {
+      margin: 10px 0;
+    }
+
+    .hamburger-menu div {
+      width: 25px;
+    }
+  }
+  @media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+</style>
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">Mario</div>
+    <div class="hamburger-menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">História</a>
+      <a href="#">Jogos</a>
+    </nav>
+    <button class="play-button">Jogar</button>
+  </div><div class="nav-list">
+    <ul>
+        <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+        <li class="nav-item"><a href="#" class="nav-link"> Sobre</a></li>
+    </ul>
+</div>
+<div class="login-button">
+    <button><a href="#">Entrar</a></button>
+</div>
+
+<div class="mobile-menu-icon">
+    <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+</div>
+</nav>
+<div class="mobile-menu">
+<ul>
+    <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Projetos</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">Sobre</a></li>
+</ul>
+
+<div class="login-button">
+    <button><a href="#">Entrar</a></button>
+</div>
+</div>
+</body>
+</html>
+
+<script>
+  function menuShow() {
+    let menuMobile = document.querySelector('.mobile-menu');
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "assets/img/menu_white_36dp.svg";
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "assets/img/close_white_36dp.svg";
+    }
+}
+</script>
