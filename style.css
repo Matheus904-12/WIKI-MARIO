@@ -1,25 +1,25 @@
 body {
-    background-image: url('mario 1.png');
+    background-image: url('image\ 5.png');
     background-repeat: no-repeat;
-    background-size: 40%; /* Agora a imagem está com metade do tamanho original */
-    background-position: left bottom;
-    background-color: #AD0110; /* Adiciona um fundo vermelho semi-transparente */
+    background-size: 60%; /* Agora a imagem está com metade do tamanho original */
+    background-position: center;
+    background-color: #ad0110; /* Adiciona um fundo vermelho semi-transparente */
     color: #FFFFFF;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 1450px; /* Adiciona espaço na parte superior para descer a imagem */
+    padding-top: 800px; /* Adiciona espaço na parte superior para descer a imagem */
   }
   
   ::-webkit-scrollbar {
     width: 12px;
     background-color: rgba(200, 200, 200);
-    border: 5px solid white
+    border: 5px solid rgb(0, 0, 0)
   }
   
   ::-webkit-scrollbar-thumb {
-    background-color:#3C8BFF;
+    background-color:#ebb017;
     border-radius: 50px;
-    border: 2px solid white
+    border: 2px solid rgb(0, 0, 0)
 
   }
 
@@ -27,13 +27,14 @@ body {
   .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px 1px;
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 2;
     top: 0; /* Adicionando esta linha */
-    background-color:#AD0110;
+    background-color:#000000;
+    
   }
   
   .moedas {
@@ -181,7 +182,7 @@ body {
     width: 70%; /* Aumenta a largura em 50% */
     position: relative; /* Adiciona posicionamento relativo */
     top: -20px;
-    padding: 35px; /* Move a imagem para cima. Ajuste conforme necessário. */
+    padding: 95px; /* Move a imagem para cima. Ajuste conforme necessário. */
     transform: scale(0);
     transition: transform 1s;;
   }
