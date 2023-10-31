@@ -1,0 +1,224 @@
+body {
+    background-image: url('png');
+    background-repeat: no-repeat;
+    background-size: 60%; /* Agora a imagem está com metade do tamanho original */
+    background-position: center;
+    background-color: #ad0110; /* Adiciona um fundo vermelho semi-transparente */
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-top: 800px; /* Adiciona espaço na parte superior para descer a imagem */
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: rgba(200, 200, 200);
+    border: 5px solid rgb(0, 0, 0)
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:#ebb017;
+    border-radius: 50px;
+    border: 2px solid rgb(0, 0, 0)
+
+  }
+
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    top: 0; /* Adicionando esta linha */
+    background-color:#000000;
+    
+  }
+  
+  .moedas {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  
+  
+  .overlay-text {
+      text-align: left;
+      padding: 10px; /* Reduzindo o padding para tornar o texto um pouco menor */
+      position: absolute;
+      top: 70px; /* Ajuste conforme necessário para evitar sobreposição com a navbar */
+      left: 20px; /* Ajuste conforme necessário para posicionar à esquerda */
+      color: #FFFFFF;
+      font-size: 14px; /* Tornando o texto pequeno um pouco menor */
+  }
+  
+  .overlay-text h3:nth-child(3) {
+   font-size: 1.3em;
+   margin-bottom: 10px;
+   color: #FFFFFF;
+   padding: 20px;
+   margin: 0;
+   position: absolute;
+  }
+  
+  
+  .overlay-text h3 {
+   font-size: 1.3em;
+   margin-bottom: 10px;
+   color: #FFFFFF;
+   padding: 20px;
+   margin: 0;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .colored-title {
+      font-size: 3.5em;
+      text-transform: uppercase;
+      padding: 20px;
+      text-align: left;
+  }
+  
+  
+  
+    .logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: bold;
+      font-size: 35px;
+      color: #0e3742;
+      -webkit-box
+    }
+  
+    nav {
+      display: flex;
+      align-items: center;
+    }
+  
+    nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1.2em;
+    }
+  
+    .play-button {
+        background-color: #DBD507;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 30px;
+        font-size: 1.2em;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-right: 45px; /* Adicione esta linha para mover o botão para a esquerda */
+      }
+      
+  
+    .play-button:hover {
+      transform: scale(1.1) translateZ(0);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      font-size: 24px;
+    }
+  
+    .hamburger-menu div {
+      width: 30px;
+      height: 3px;
+      background-color: #FFFFFF;
+      margin: 3px 0;
+      transition: background-color 0.3s;
+    }
+  
+    .mario {
+    width: 70%; /* Aumenta a largura em 50% */
+    position: relative; /* Adiciona posicionamento relativo */
+    top: -20px;
+    padding: 95px; /* Move a imagem para cima. Ajuste conforme necessário. */
+    transform: scale(0);
+    transition: transform 1s;;
+  }
+  
+  /* Quando a classe "loaded" é adicionada, a imagem vai surgir */
+.loaded .mario {
+    transform: scale(1); /* Define a escala final para 1 */
+  }
+
+    @media (max-width: 768px) {
+      .hamburger-menu {
+        display: flex;
+      }
+  
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+  
+      nav.active {
+        display: flex;
+      }
+  
+      nav a {
+        margin: 10px 0;
+      }
+  
+      .hamburger-menu div {
+        width: 25px;
+      }
+    }
+
+    .scroll-indicator {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        animation: bounce 1.5s infinite;
+        padding-top: 250px;
+      }
+      
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+      }
+      
+      .cta-button {
+        position: absolute;
+        bottom: 270px; /* Ajuste conforme necessário para a posição desejada */
+        right: 94%; /* Coloca o botão no centro */
+        transform: translateX(50%); /* Move o botão para a direita */
+        padding: 10px 20px;
+        background-color: #FFFFFF;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        font-size: 1em;
+        text-align: center;
+        text-decoration: none;
+        color: #000000;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      .cta-button:hover {
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+      
